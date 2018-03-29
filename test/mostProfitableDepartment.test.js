@@ -19,14 +19,13 @@ describe("mostProfitableDepartment function", function(){
 
 //let result = [{department : 'outdoor', sales : 18007}];
 
-  it("should return return the most profitable department", function(){
+  it("should return the most profitable department on the week.", function(){
     assert.equal("outdoor",mostProfitableDepartment("salesData"));
 });
 
-it("should return return the most profitable department", function(){
-  assert.notDeepEqual({department : 'outdoor', sales : 1500},{department : 'outdoor', sales : 18007});
+it("should return that these sale figures are not the same.", function(){
+  assert.notEqual({department : 'outdoor', sales : 1500},{department : 'outdoor', sales : 18007});
 
 });
-
 
 });

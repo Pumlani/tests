@@ -1,16 +1,15 @@
-describe('isWeekday function' , function(){
-    it('should print out it"s week day' , function(){
-     var day = 'Monday';
-      assert.equal(isWeekday('day'), true);
+describe('countRegNumber function' , function(){
+    it('should return three registration numbers.' , function(){
+     //var RegNumber = ('CA 182736,CY 523519,CJ 812328');
+      assert.equal(countRegNumber('CA 182736,CY 523519,CJ 812328'),3);
 
     });
-    it('should prints out it"s week day' , function(){
-     var day = 'Sunday';
-      assert.notEqual(isWeekday('day'), false);
+
+    it('should return an error.' , function(){
+     //var RegNumber = ('CA 182736,CY 523519,CJ 812328');
+      assert.notEqual(countRegNumber('CA 182736,CY 523519,CJ 812328'),0);
 
     });
-    it('should prints out it"s week day' , function(){
-    assert.notDeepEqual({ day: 'Saturday' }, { day: 'Monday' });
-  });
+
 
 });

@@ -20,12 +20,18 @@ describe("mostProfitableDay function", function(){
 
 //let result = [{day : 'Thursday', sales : 18007}];
 
-  it("should return return the most profitable day", function(){
+  it("should return the most profitable day of the week.", function(){
     assert.deepEqual("Thursday",mostProfitableDay(salesData));
 });
-it("should return return the most profitable day", function(){
-  assert.notDeepEqual({sales : 18007, day : 'Thursday'},{sales : 12000, day : 'Thursday'}, "these are not deeply equal");
+it("should return that these sales are not the same.", function(){
+  assert.notEqual({sales : 18007, day : 'Thursday'},{sales : 12000, day : 'Thursday'}, "these are not equal");
 
 });
+it("should not give an error on an empty list", function(){
+
+    var salesData = [];
+    assert.equal("", mostProfitableDay(salesData));
+
+  });
 
 });
